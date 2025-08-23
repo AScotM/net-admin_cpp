@@ -8,7 +8,7 @@ sudo dnf install gcc-c++ fmt-devel nlohmann-json-devel
 
 
 Compile: 
-g++ -std=c++17 -o net-admin net_admin.cpp -lfmt
+g++ -std=c++17 -o net-admin net-admin.cpp -lfmt
 
 Chmod if needed:
 chmod +x net-admin
