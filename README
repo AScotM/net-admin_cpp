@@ -1,0 +1,21 @@
+# net-admin
+A C++ tool to monitor TCP connections (IPv4 & IPv6) on Linux.
+
+## Installation on Fedora
+Install dependencies:
+
+sudo dnf install gcc-c++ fmt-devel nlohmann-json-devel
+
+
+Compile: 
+g++ -std=c++17 -o net-admin net_admin.cpp -lfmt
+
+Chmod if needed:
+chmod +x net-admin
+
+
+Usage:
+net-admin [--interval <seconds>] [--filter-state <state>] [--filter-ip <ip>] [--filter-port <port>] [--output-format <text|json>]
+
+Example:
+sudo net-admin --interval 5 --filter-state ESTABLISHED --filter-ip 127.0.0.1
